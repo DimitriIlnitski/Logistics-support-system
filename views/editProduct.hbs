@@ -1,0 +1,42 @@
+<div class="card-panel">
+  <span class="blue-text text-darken-2">Редагувати товар</span>
+</div>
+<div class="row">
+  <form id="myForm" class="col s12" action="/products/editHandlingProduct" method="post">
+    <div class="row">
+      <div class="input-field col s10">
+        <input value="{{this.name}}" name="name" id="name" type="text" class="validate" autocomplete="off">
+        <label class="active" for="name">Name</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s10">
+        <input value="{{this.volume}}" name="volume" id="volume" type="text" class="validate" autocomplete="off">
+        <label class="active" for="volume">Volume</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s10">
+        <input value="{{this.material}}" name="material" id="material" type="text" class="validate" autocomplete="off">
+        <label class="active" for="material">Material</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s10">
+        <input value="{{this.price}}" name="price" id="price" type="text" class="validate" autocomplete="off">
+        <label class="active" for="price">Price</label>
+      </div>
+    </div>
+    <input value="{{this.id}}" id="mongoId" style="display:none" name="id" />
+    <div class="row">
+      <button class="btn waves-effect waves-light" type="submit" form="myForm" name="action">Редагувати
+      </button>
+    </div>
+  </form>
+</div>
+<script>
+  remove.onclick = function () {
+    let item = document.getElementById('mongoId').value;
+    document.getElementById('mongoId').value = item;
+  }
+</script>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <title>E-shop</title>
+</head>
+
+<body>
+
+  {{>menu}}
+  <main class="main">
+    <div class="row">
+      <div class="col s12 m4 l3">
+
+        <div class="card-panel">
+          <div class="container col s12">
+            Сортувати
+          </div>
+          <div>
+            <form style="margin: 0.5em;font-size: 0.5em" action="/products/sortProduct" method='post'>
+              <input id="btnInput" style="display:none" type="text" name="sort" value="1">
+              <button class="btn waves-effect waves-light" type="submit">Сортувати за
+                зростанням</button>
+            </form>
+          </div>
+          <div>
+            <form style="margin: 0.5em;font-size: 0.5em" action="/products/sortProduct" method='post'>
+              <input id="btnInput" style="display:none" type="text" name="sort" value="-1">
+              <button class="btn waves-effect waves-light" type="submit">Сортувати за
+                спаданням</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="card-panel">
+          <div class="row">
+            <form action="/products/getVolume" method='post'>
+              <button id="calculate" onclick='calc()' class="waves-effect waves-light btn"
+                type="submit">Розрахувати</button>
+            </form>
+          </div>
+          <div id="resultCalc" class="row">Загальний об'єм складає, мл: {{this.final}}</div>
+          <script>
+            function calc() {
+
+            }
+          </script>
+        </div>
+
+        <div class="card-panel">
+          <div class="row">
+            <div class="input-field col s9">
+              <form id="mySearch" action="/products/searchProduct" method="post">
+                <input id="search" name="name" type="text" class="validate" autocomplete="off">
+                <label class="active" for="search">Пошук товару по назві</label>
+              </form>
+              <div class="row">
+                <button id="edit" form="mySearch" class="btn waves-effect waves-light" type="submit">Пошук</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="col s12 m8 l9">
+        {{{body}}}
+      </div>
+    </div>
+  </main>
+  {{>footer}}
+
+</body>
+
+</html>
