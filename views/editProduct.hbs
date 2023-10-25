@@ -1,42 +1,182 @@
-<div class="card-panel">
-  <span class="blue-text text-darken-2">Редагувати товар</span>
-</div>
+<h4>
+	<span class="text-darken-2">Редагувати замовлення</span>
+</h4>
 <div class="row">
-  <form id="myForm" class="col s12" action="/products/editHandlingProduct" method="post">
-    <div class="row">
-      <div class="input-field col s10">
-        <input value="{{this.name}}" name="name" id="name" type="text" class="validate" autocomplete="off">
-        <label class="active" for="name">Name</label>
-      </div>
-    </div>
-    <div class="row">
-      <div class="input-field col s10">
-        <input value="{{this.volume}}" name="volume" id="volume" type="text" class="validate" autocomplete="off">
-        <label class="active" for="volume">Volume</label>
-      </div>
-    </div>
-    <div class="row">
-      <div class="input-field col s10">
-        <input value="{{this.material}}" name="material" id="material" type="text" class="validate" autocomplete="off">
-        <label class="active" for="material">Material</label>
-      </div>
-    </div>
-    <div class="row">
-      <div class="input-field col s10">
-        <input value="{{this.price}}" name="price" id="price" type="text" class="validate" autocomplete="off">
-        <label class="active" for="price">Price</label>
-      </div>
-    </div>
-    <input value="{{this.id}}" id="mongoId" style="display:none" name="id" />
-    <div class="row">
-      <button class="btn waves-effect waves-light" type="submit" form="myForm" name="action">Редагувати
-      </button>
-    </div>
-  </form>
+	<form
+		id="myForm"
+		class="col s12"
+		action="/products/editHandlingProduct"
+		method="post"
+	>
+		<div class="row">
+			<div class="input-field col s10">
+				<input
+					value="{{this.dispatchDate}}"
+					name="dispatchDate"
+					id="dispatchDate"
+					type="text"
+					class="validate"
+					autocomplete="off"
+				/>
+				<label class="active" for="dispatchDate">Dispatch date</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="input-field col s10">
+				<input
+					value="{{this.customer}}"
+					name="customer"
+					id="customer"
+					type="text"
+					class="validate"
+					autocomplete="off"
+				/>
+				<label class="active" for="customer">Customer</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="input-field col s10">
+				<input
+					value="{{this.orderNumber}}"
+					name="orderNumber"
+					id="orderNumber"
+					type="text"
+					class="validate"
+					autocomplete="off"
+				/>
+				<label class="active" for="orderNumber">Order</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="input-field col s10">
+				<input
+					value="{{this.orderDate}}"
+					name="orderDate"
+					id="orderDate"
+					type="text"
+					class="validate"
+					autocomplete="off"
+				/>
+				<label class="active" for="orderDate">Order date</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="input-field col s10">
+				<input
+					value="{{this.placeOfDelivery}}"
+					name="placeOfDelivery"
+					id="placeOfDelivery"
+					type="text"
+					class="validate"
+					autocomplete="off"
+				/>
+				<label class="active" for="placeOfDelivery">Place of delivery</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="input-field col s10">
+				<input
+					value="{{this.nettoWeight}}"
+					name="nettoWeight"
+					id="nettoWeight"
+					type="number"
+					class="validate"
+					autocomplete="off"
+				/>
+				<label class="active" for="nettoWeight">Netto weight</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="input-field col s10">
+				<input
+					value="{{this.price}}"
+					name="price"
+					id="price"
+					type="number"
+					class="validate"
+					autocomplete="off"
+				/>
+				<label class="active" for="price">Price</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="input-field col s10">
+				<input
+					value="{{this.incoterms}}"
+					name="incoterms"
+					id="incoterms"
+					type="text"
+					class="validate"
+					autocomplete="off"
+				/>
+				<label class="active" for="incoterms">Incoterms</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="input-field col s10">
+				<input
+					value="{{this.paymentDelay}}"
+					name="paymentDelay"
+					id="paymentDelay"
+					type="number"
+					class="validate"
+					autocomplete="off"
+				/>
+				<label class="active" for="paymentDelay">Payment delay</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="input-field col s10">
+				<input
+					value="{{this.transporter}}"
+					name="transporter"
+					id="transporter"
+					type="text"
+					class="validate"
+					autocomplete="off"
+				/>
+				<label class="active" for="transporter">Transporter</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="input-field col s10">
+				<input
+					value="{{this.freight}}"
+					name="freight"
+					id="freight"
+					type="number"
+					class="validate"
+					autocomplete="off"
+				/>
+				<label class="active" for="freight">Freight</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="input-field col s10">
+				<input
+					value="{{this.plateNumbers}}"
+					name="plateNumbers"
+					id="plateNumbers"
+					type="text"
+					class="validate"
+					autocomplete="off"
+				/>
+				<label class="active" for="plateNumbers">Plate numbers</label>
+			</div>
+		</div>
+		<input value="{{this.id}}" id="mongoId" style="display:none" name="id" />
+		<div class="row">
+			<button
+				class="btn waves-effect waves-light"
+				type="submit"
+				name="action"
+			>Редагувати
+			</button>
+		</div>
+	</form>
 </div>
 <script>
-  remove.onclick = function () {
-    let item = document.getElementById('mongoId').value;
-    document.getElementById('mongoId').value = item;
-  }
+	remove.onclick = function () { let item =
+	document.getElementById('mongoId').value;
+	document.getElementById('mongoId').value = item; }
 </script>

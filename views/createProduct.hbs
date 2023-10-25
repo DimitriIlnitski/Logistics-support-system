@@ -1,35 +1,159 @@
-<div class="card-panel">
-  <span class="blue-text text-darken-2">Додати товар</span>
-</div>
+<h4>
+	<span class="text-darken-2">Створити замовлення</span>
+</h4>
 <div class="row">
-  <form class="col s12" action="postProduct" method="post">
-    <div class="row">
-      <div class="input-field col s10">
-        <input name="name" id="name" type="text" class="validate" autocomplete="off">
-        <label class="active" for="name">Name</label>
-      </div>
-    </div>
-    <div class="row">
-      <div class="input-field col s10">
-        <input name="volume" id="volume" type="text" class="validate" autocomplete="off">
-        <label class="active" for="volume">Volume</label>
-      </div>
-    </div>
-    <div class="row">
-      <div class="input-field col s10">
-        <input name="material" id="material" type="text" class="validate" autocomplete="off">
-        <label class="active" for="material">Material</label>
-      </div>
-    </div>
-    <div class="row">
-      <div class="input-field col s10">
-        <input name="price" id="price" type="text" class="validate" autocomplete="off">
-        <label class="active" for="price">Price</label>
-      </div>
-    </div>
-    <div class="row">
-      <button class="btn waves-effect waves-light" type="submit" name="action">Створити
-      </button>
-    </div>
-  </form>
+	<form class="col s12" action="postProduct" method="post">
+		<div class="row">
+			<div class="input-field col s10">
+				<input
+					name="dispatchDate"
+					id="dispatchDate"
+					type="text"
+					class="validate"
+					autocomplete="off"
+				/>
+				<label class="active" for="dispatchDate">Dispatch date</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="input-field col s10">
+				<input
+					name="customer"
+					id="customer"
+					type="text"
+					class="validate"
+					autocomplete="off"
+				/>
+				<label class="active" for="customer">Customer</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="input-field col s10">
+				<input
+					name="orderNumber"
+					id="orderNumber"
+					type="text"
+					class="validate"
+					autocomplete="off"
+				/>
+				<label class="active" for="orderNumber">Order</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="input-field col s10">
+				<input
+					name="orderDate"
+					id="orderDate"
+					type="text"
+					class="validate"
+					autocomplete="off"
+				/>
+				<label class="active" for="orderDate">Order date</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="input-field col s10">
+				<input
+					name="placeOfDelivery"
+					id="placeOfDelivery"
+					type="text"
+					class="validate"
+					autocomplete="off"
+				/>
+				<label class="active" for="placeOfDelivery">Place of delivery</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="input-field col s10">
+				<input
+					name="nettoWeight"
+					id="nettoWeight"
+					type="number"
+					class="validate"
+					autocomplete="off"
+				/>
+				<label class="active" for="nettoWeight">Netto weight</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="input-field col s10">
+				<input
+					name="price"
+					id="price"
+					type="number"
+					class="validate"
+					autocomplete="off"
+				/>
+				<label class="active" for="price">Price</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="input-field col s10">
+				<input
+					name="incoterms"
+					id="incoterms"
+					type="text"
+					class="validate"
+					autocomplete="off"
+				/>
+				<label class="active" for="incoterms">Incoterms</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="input-field col s10">
+				<input
+					name="paymentDelay"
+					id="paymentDelay"
+					type="number"
+					class="validate"
+					autocomplete="off"
+				/>
+				<label class="active" for="paymentDelay">Payment delay</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="input-field col s10">
+				<input
+					name="transporter"
+					id="transporter"
+					type="text"
+					class="validate"
+					autocomplete="off"
+				/>
+				<label class="active" for="transporter">Transporter</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="input-field col s10">
+				<input
+					name="freight"
+					id="freight"
+					type="number"
+					class="validate"
+					autocomplete="off"
+				/>
+				<label class="active" for="freight">Freight</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="input-field col s10">
+				<input
+					name="plateNumbers"
+					id="plateNumbers"
+					type="text"
+					class="validate"
+					autocomplete="off"
+				/>
+				<label class="active" for="plateNumbers">Plate numbers</label>
+			</div>
+		</div>
+		<div class="row">
+			<button
+				class="btn waves-effect waves-light"
+				type="submit"
+				name="action"
+			>Створити
+			</button>
+		</div>
+	</form>
 </div>
