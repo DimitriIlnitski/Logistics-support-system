@@ -1,9 +1,11 @@
 const Product = require("../models/product.js");
 
+// Додати замовлення
 exports.addProduct = function (request, response) {
 	response.render("createProduct.hbs");
 };
 
+//Статистика
 exports.statistics = function (request, response) {
 	let result = { orderQuantity: 0, weight: 0 };
 	Product.find({}, function (err, product) {
@@ -19,6 +21,7 @@ exports.statistics = function (request, response) {
 	});
 };
 
+//Склад
 exports.store = function (request, response) {
 	response.render("store.hbs");
 };
@@ -32,7 +35,7 @@ exports.editProduct = function (request, response) {
 	});
 };
 
-//Редагування продукту
+//Редагування замовлення
 exports.editHandlingProduct = function (request, response) {
 	if (!request.body) return response.status(400);
 	const productId = request.body.id;
@@ -76,7 +79,7 @@ exports.editHandlingProduct = function (request, response) {
 	);
 };
 
-//Видалення продукту
+//Видалення замовлення
 exports.removeProduct = function (request, response) {
 	if (!request.body) return response.status(400);
 	const productId = request.body.id;
@@ -87,6 +90,7 @@ exports.removeProduct = function (request, response) {
 	response.redirect("/products");
 };
 
+//Виведення замовлень
 exports.getProducts = function (request, response) {
 	Product.find({}, function (err, allProducts) {
 		if (err) {
